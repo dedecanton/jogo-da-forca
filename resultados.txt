@@ -1,0 +1,6 @@
+Palavra: a | Perdedor: Desafiante a | Ganhador: Competidor a 
+Palavra: a | Perdedor: Desafiante a | Ganhador: Competidor a 
+Palavra: b | Perdedor: Competidor b | Ganhador: Desafiante b 
+Palavra: teste | Perdedor: Desafiante andre | Ganhador: Competidor arthur 
+Palavra: b | Perdedor: Desafiante andre | Ganhador: Competidor arthur 
+Palavra: c | Perdedor: Competidor arthur | Ganhador: Desafiante andre  

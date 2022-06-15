@@ -1,4 +1,0 @@
-Palavra: a | Perdedor: Desafiante a | Ganhador: Competidor a 
-Palavra: a | Perdedor: Desafiante a | Ganhador: Competidor a 
-Palavra: a | Perdedor: Desafiante a | Ganhador: Competidor a 
-Palavra: teste | Perdedor: Desafiante andre | Ganhador: Competidor arthur 

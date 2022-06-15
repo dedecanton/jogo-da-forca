@@ -4,6 +4,6 @@ def pedir_identificacao():
     
     if(not desafiante or not competidor):
         print('Você inseriu algum valor inválido')
-        pedir_identificacao()
+        return pedir_identificacao()
 
     return [desafiante, competidor]

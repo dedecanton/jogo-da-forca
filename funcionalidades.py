@@ -1,6 +1,12 @@
 
 from os import system
+from time import sleep
 
+def pular_linha():
+    print('\n')
+
+def limpar_tela():
+    system('clear') # if system is windows, change "clear" to "cls"
 
 def inicializa_letras_acertadas(palavra):
     return ["_" for letra in palavra]
@@ -18,7 +24,7 @@ def informar_dica(dicasInformadas, dica1, dica2, dica3):
         print(f'Dica 2: {dica2}')
     elif (dicasInformadas == 2):
         print(f'Dica 3: {dica3}')
-    elif (dicasInformadas > 2):
+    elif (dicasInformadas >= 3):
         print(f'Todas as dicas já foram informadas')
     print('*'*50)
 
@@ -32,14 +38,14 @@ def chutar(palavra_chave, letras_acertadas, letras_faltando, erros, chutes):
 
     chutes.append(chute)
     if chute in palavra_chave:
-        print('Acertou!')
         for index, letra in enumerate(palavra_chave):
             if chute == letra:
                 letras_acertadas[index] = chute
         letras_faltando = str(letras_acertadas.count('_'))
-    else:
-        print('Errou :(')
+    else: 
         erros += 1
+    
+    limpar_tela()
     return letras_acertadas, int(letras_faltando), int(erros), chutes
 
 
@@ -74,14 +80,19 @@ def jogar_novamente(functionGame):
         quit()
     else:
         print('Operação inválida')
+        jogar_novamente(functionGame)
 
 
 def mostrar_mensagem_derrota():
-    print('Você perdeu :(')
-
-
+    pular_linha() 
+    print(f'{"*" * 20} Você perdeu :( {"*" * 20}')
+    pular_linha()
+    
 def mostrar_mensagem_vitoria():
-    print('Você ganhou!')
+    pular_linha()
+    print(f'{"*" * 20} Você ganhou :) {"*" * 20}')
+    pular_linha()
+    
 
 
 def mostrar_informacoes_jogo(letras_acertadas, erros, chutes):

@@ -32,9 +32,9 @@ def informar_dica(dicasInformadas, dica1, dica2, dica3):
 def chutar(palavra_chave, letras_acertadas, letras_faltando, erros, chutes):
     chute = pede_letra()
 
-    if not chute or len(chute) != 1:
+    if not chute or len(chute) != 1 or chute.isnumeric():
         print('Letra inválida')
-        chutar(palavra_chave, letras_acertadas, letras_faltando, erros, chutes)
+        return chutar(palavra_chave, letras_acertadas, letras_faltando, erros, chutes)
 
     chutes.append(chute)
     if chute in palavra_chave:
@@ -49,9 +49,9 @@ def chutar(palavra_chave, letras_acertadas, letras_faltando, erros, chutes):
     return letras_acertadas, int(letras_faltando), int(erros), chutes
 
 
-def escrever_resultado(resultado):
+def escrever_resultado(palavra_chave, ganhador, perdedor):
     doc = open('resultados.txt', 'a')
-    doc.writelines(resultado)
+    doc.writelines(f'Palavra: {palavra_chave} | Ganhador: {ganhador} | Perdedor: {perdedor} \n')
 
 
 def historico_de_partidas():

@@ -49,11 +49,11 @@ def JogoDaForca():
     
     if(enforcou):
         mostrar_mensagem_derrota()
-        escrever_resultado(f'Palavra: {palavra_chave} | Perdedor: Competidor {competidor} | Ganhador: Desafiante {desafiante} \n')
+        escrever_resultado(palavra_chave, f'Desafiante {desafiante}', f'Competidor {competidor}')
 
     if(ganhou):
         mostrar_mensagem_vitoria()
-        escrever_resultado(f'Palavra: {palavra_chave} | Perdedor: Desafiante {desafiante} | Ganhador: Competidor {competidor} \n')
+        escrever_resultado(palavra_chave, f'Competidor {competidor}', f'Desafiante {desafiante}')
     
     jogar_novamente(JogoDaForca)
 JogoDaForca()
